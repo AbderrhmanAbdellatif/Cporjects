@@ -8,8 +8,10 @@
 int main() {
 	//while (1) {
 	 //   int input = 0;
-	 char *Team[32]; /*array declaration */
+	char* Team[36] = {0}; /*array declaration */
+	
 	int indexofTeam = 0, i = 0;
+	
 	printf("\n 1. Takimlari oku \n 2. Karistir diz \n 3. Sirala \n 4. Ekrana bas \n 5. Dosyaya yaz \n 6. Exit \n");
 	static const char filename[] = "takimlar.txt";
 	FILE* file = fopen(filename, "r");
@@ -19,8 +21,12 @@ int main() {
 		while (fgets(line, sizeof line, file) != NULL) /* read a line */
 		{
 			// printf("[%s]size is [%d] \n",line,strlen(line)-1);
-			strcpy(Team[indexofTeam],line);
+			Team[indexofTeam] = line;
 			indexofTeam++;
+			if (indexofTeam == 36)
+			{
+				break;
+			}
 		}
 		fclose(file);
 	}
@@ -30,13 +36,14 @@ int main() {
 	}
 
 
-	for (i = 0; i < 32; i++) {
-		printf("[%s]", Team[i]);/* read data from an array*/
+	for (i = 0; i < 36; i++) {
+		printf("[%s']", Team[i]);/* read data from an array*/
 	}
 	//	scanf("%d", &input);
 	//	printf("%d",input);
 
 	//}
+	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
