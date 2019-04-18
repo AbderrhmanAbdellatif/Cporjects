@@ -1,12 +1,42 @@
-// Turkishcup.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// Turkishcup.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <stdio.h>
+#include <string.h>
 
-int main()
-{
-	int i = 0;
-	printf("%d",i);
+
+int main() {
+	//while (1) {
+	 //   int input = 0;
+	 char *Team[32]; /*array declaration */
+	int indexofTeam = 0, i = 0;
+	printf("\n 1. Takimlari oku \n 2. Karistir diz \n 3. Sirala \n 4. Ekrana bas \n 5. Dosyaya yaz \n 6. Exit \n");
+	static const char filename[] = "takimlar.txt";
+	FILE* file = fopen(filename, "r");
+	if (file != NULL)
+	{
+		char line[128]; /* or other suitable maximum line size */
+		while (fgets(line, sizeof line, file) != NULL) /* read a line */
+		{
+			// printf("[%s]size is [%d] \n",line,strlen(line)-1);
+			strcpy(Team[indexofTeam],line);
+			indexofTeam++;
+		}
+		fclose(file);
+	}
+	else
+	{
+		perror(filename); /* why didn't the file open? */
+	}
+
+
+	for (i = 0; i < 32; i++) {
+		printf("[%s]", Team[i]);/* read data from an array*/
+	}
+	//	scanf("%d", &input);
+	//	printf("%d",input);
+
+	//}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
