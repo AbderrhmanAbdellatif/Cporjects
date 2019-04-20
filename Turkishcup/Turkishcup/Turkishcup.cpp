@@ -11,7 +11,6 @@ void main()
 	int chr = 0; //counter of chars (except new line char)
     int maxlen = 50;
 	int k = 0, m = 0, j = 0;
-	srand(time(NULL));
 	int contorl = 0;
 
 	
@@ -47,8 +46,10 @@ void main()
 	}
 
 	for (i = 0; i < 8; i++) {
-		int randomIndex = rand() % nlines;
+		
 		for (j = 0; j < 4; j++) {
+			srand(time(NULL));
+			int randomIndex = rand() % nlines;
 			list[randomIndex];
 
 			for (k = 0; k < 8; k++) {
@@ -61,7 +62,15 @@ void main()
 					else
 					{
 						contorl = 2;
+						
 					}
+				}
+				if (contorl==1) {
+
+
+					break;
+					
+				
 				}
 			}
 
@@ -77,7 +86,7 @@ void main()
 
 	for (k = 0; k < 8; k++) {
 		for (m = 0; m < 4; m++) {
-			printf(" %s ", Mix[k][m]);
+			printf("%s", Mix[k][m]);
 		}
 		printf("\n");
 	}
