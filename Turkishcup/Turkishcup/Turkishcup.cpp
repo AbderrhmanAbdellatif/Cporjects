@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include  <time.h>
+#include <cstdio>
 void main()
 {
 	FILE* file = fopen("takimlar.txt", "r");
@@ -36,24 +37,24 @@ void main()
 	//{
 	//	printf("%s", list[c]);
 	//}
+	int i_index, j_index;
 
 
-
-	for (i = 0; i < 8; i++) {
-		for (j = 0; j < 4; j++) {
+	for (i = 0; i <=8; i++) {
+		for (j = 0; j <=4; j++) {
 			Mix[i][j] = (char*)malloc(strlen(buff) * sizeof(char));
 		}
 	}
 
-	for (i = 0; i < 8; i++) {
+	for (i = 0; i <=8; i++) {
 		
-		for (j = 0; j < 4; j++) {
+		for (j = 0; j <=4; j++) {
 			srand(time(NULL));
 			int randomIndex = rand() % nlines;
 			list[randomIndex];
 
-			for (k = 0; k < 8; k++) {
-				for (m = 0; m < 4; m++) {
+			for (k = 0; k <=8; k++) {
+				for (m = 0; m <=4; m++) {
 					if (strcmp(list[randomIndex], Mix[k][m]) == 0)
 					{
 						contorl = 1;
@@ -67,29 +68,32 @@ void main()
 				}
 				if (contorl==1) {
 
-
 					break;
-					
-				
 				}
 			}
-
+			
 			if (contorl == 2)
 			{
-				Mix[i][j]= list[randomIndex];
+				strcpy(Mix[i][j],list[randomIndex]);
 				contorl = 0;
+				i_index = i;
+				j_index = j;
+			}else {
+				i = i_index;
+				j = j_index;
 			}
 
 		}
 	}
+	
 
-
-	for (k = 0; k < 8; k++) {
-		for (m = 0; m < 4; m++) {
+	for (k = 0; k <=8; k++) {
+		for (m = 0; m <=4; m++) {
 			printf("%s", Mix[k][m]);
 		}
 		printf("\n");
 	}
-
+	free(list);
+	free(Mix);
 
 }
