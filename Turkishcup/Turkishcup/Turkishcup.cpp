@@ -5,6 +5,7 @@
 #include <cstdio>
 
 void sort();
+int wordtoarray(char* kelime, char* Mix[8][4]);
 void main()
 {
 	FILE* file = fopen("takimlar.txt", "r");
@@ -19,7 +20,7 @@ void main()
 	
 	printf("lines: %d\nmax string len: %d\n\n", nlines, maxlen);
 	
-	char* list[36];
+	char* list[36];// 36  takim
 	char* Mix[8][4];
 	int buffsize = maxlen * sizeof(char);
 	char buff[100];
@@ -28,75 +29,56 @@ void main()
 	while (fgets(buff, buffsize, file))
 	{
 
-		list[i] =(char *)malloc(strlen(buff) * sizeof(char));
+		list[i] =(char *)malloc(strlen(buff) * sizeof(char)); 
 		strcpy(list[i], buff);
 		i++;
 	}
 
 	fclose(file);
- //   int c = 0;
-	//for (c; c <nlines; c++)
-	//{
-	//	printf("%s", list[c]);
-	//}
-	int i_index, j_index;
+  /*  int c = 0;
+	for (c; c <nlines; c++)
+	{
+		printf("%s", list[c]);
+	}*/
+	//system("pause");
+	int i_index =0 , j_index =0;
 
 
-	for (i = 0; i <=8; i++) {
-		for (j = 0; j <=4; j++) {
+	for (i = 0; i <8; i++) {
+		for (j = 0; j <4; j++) {
 			Mix[i][j] = (char*)malloc(strlen(buff) * sizeof(char));
 		}
 	}
+	printf("last for\n");
 
-	for (i = 0; i <=8; i++) {
-		
-		for (j = 0; j <=4; j++) {
+	for (i = 0; i <8; i++) {
+		for (j = 0; j <4; j++) {
+			
 			srand(time(NULL));
 			int randomIndex = rand() % nlines;
-			list[randomIndex];
-
-			for (k = 0; k <=8; k++) {
-				for (m = 0; m <=4; m++) {
-					if (strcmp(list[randomIndex], Mix[k][m]) == 0)
-					{
-						contorl = 1;
-						break;
-					}
-					else
-					{
-						contorl = 2;
-						
-					}
-				}
-				if (contorl==1) {
-
-					break;
-				}
-			}
-			
-			if (contorl == 2)
+			int arr  = wordtoarray(list[randomIndex], Mix);
+			if (arr == 2)
 			{
-				strcpy(Mix[i][j],list[randomIndex]);
-				contorl = 0;
+				//system("pause");
+			    strcpy(Mix[i][j],list[randomIndex]);
 				i_index = i;
 				j_index = j;
+				if (i == 7 && j == 3) return;
 			}else {
 				i = i_index;
 				j = j_index;
 			}
-
 		}
 	}
-	
+	printf("last printing\n");
 
-	for (k = 0; k <=8; k++) {
-		for (m = 0; m <=4; m++) {
+	for (k = 0; k <8; k++) {
+		for (m = 0; m <4; m++) {
 			printf("%s", Mix[k][m]);
 		}
 		printf("\n");
 	}
-	free(list);
-	free(Mix);
+	
 
 }
 
@@ -143,4 +125,32 @@ void sort()
 
 
 
+}
+
+int wordtoarray(char* kelime, char* Mix[8][4])
+{
+
+
+	int k, m , contorl;
+
+	for (k = 0; k < 8; k++) {
+		for (m = 0; m < 4; m++) {
+			if (strcmp(kelime, Mix[k][m]) == 0) // dizi ayina kelime 
+			{
+				contorl = 1;
+				break;
+			}
+			else
+			{
+				contorl = 2;
+
+			}
+		}
+		if (contorl == 1) {
+
+			break;
+		}
+	}
+
+	return contorl;
 }

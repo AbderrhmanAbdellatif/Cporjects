@@ -1,11 +1,23 @@
 ﻿  Turkishcup.cpp
-C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(7,1): warning C4326:  return type of 'main' should be 'int' instead of 'void'
-C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(52,14): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(8,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(10,1): warning C4326:  return type of 'main' should be 'int' instead of 'void'
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(57,14): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(11,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(208): message :  see declaration of 'fopen'
-C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(30,1): warning C4996:  'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(33,1): warning C4996:  'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(133): message :  see declaration of 'strcpy'
-C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(77,1): warning C4996:  'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(63,1): warning C4996:  'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(133): message :  see declaration of 'strcpy'
-C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(10,10): warning C4101:  'cbuff': unreferenced local variable
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(13,10): warning C4101:  'cbuff': unreferenced local variable
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(92,1): warning C4996:  'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(1274): message :  see declaration of 'scanf'
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(97,1): warning C4996:  'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(1274): message :  see declaration of 'scanf'
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(98,1): warning C4996:  'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(133): message :  see declaration of 'strcpy'
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(107,1): warning C4996:  'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(133): message :  see declaration of 'strcpy'
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(108,1): warning C4996:  'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(133): message :  see declaration of 'strcpy'
+C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Turkishcup\Turkishcup.cpp(109,1): warning C4996:  'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(133): message :  see declaration of 'strcpy'
   Turkishcup.vcxproj -> C:\Users\Toshiba\Documents\Cporjects\Turkishcup\Debug\Turkishcup.exe
