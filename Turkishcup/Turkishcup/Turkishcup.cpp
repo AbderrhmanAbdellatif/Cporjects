@@ -40,37 +40,16 @@ void main()
 	{
 		printf("%s", list[c]);
 	}*/
-	//system("pause");
-	int i_index =0 , j_index =0;
-
-
-	for (i = 0; i <8; i++) {
-		for (j = 0; j <4; j++) {
-			Mix[i][j] = (char*)malloc(strlen(buff) * sizeof(char));
+	
+	int randomIndex = 0;
+	for (i = 0; i < 8; i++) {
+		for (j = 0; j < 4; j++) {
+			srand(time(0));
+			randomIndex = rand() % nlines +1;
+			Mix[i][j] = (char*)malloc(strlen(buff) * sizeof(char));  
+			strcpy(Mix[i][j],list[randomIndex]);// select the item from team and input to list of teams 
 		}
 	}
-	printf("last for\n");
-
-	for (i = 0; i <8; i++) {
-		for (j = 0; j <4; j++) {
-			
-			srand(time(NULL));
-			int randomIndex = rand() % nlines;
-			int arr  = wordtoarray(list[randomIndex], Mix);
-			if (arr == 2)
-			{
-				//system("pause");
-			    strcpy(Mix[i][j],list[randomIndex]);
-				i_index = i;
-				j_index = j;
-				if (i == 7 && j == 3) return;
-			}else {
-				i = i_index;
-				j = j_index;
-			}
-		}
-	}
-	printf("last printing\n");
 
 	for (k = 0; k <8; k++) {
 		for (m = 0; m <4; m++) {
@@ -78,7 +57,8 @@ void main()
 		}
 		printf("\n");
 	}
-	
+	system("pause");
+
 
 }
 
@@ -127,30 +107,3 @@ void sort()
 
 }
 
-int wordtoarray(char* kelime, char* Mix[8][4])
-{
-
-
-	int k, m , contorl;
-
-	for (k = 0; k < 8; k++) {
-		for (m = 0; m < 4; m++) {
-			if (strcmp(kelime, Mix[k][m]) == 0) // dizi ayina kelime 
-			{
-				contorl = 1;
-				break;
-			}
-			else
-			{
-				contorl = 2;
-
-			}
-		}
-		if (contorl == 1) {
-
-			break;
-		}
-	}
-
-	return contorl;
-}
