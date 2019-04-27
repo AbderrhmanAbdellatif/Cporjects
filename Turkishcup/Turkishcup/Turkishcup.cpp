@@ -41,11 +41,11 @@ void main()
 		printf("%s", list[c]);
 	}*/
 	
-	int randomIndex = 0;
+	srand(time(NULL));
+
 	for (i = 0; i < 8; i++) {
 		for (j = 0; j < 4; j++) {
-			srand(time(0));
-			randomIndex = rand() % nlines +1;
+			int randomIndex = rand() % nlines +1;
 			Mix[i][j] = (char*)malloc(strlen(buff) * sizeof(char));  
 			strcpy(Mix[i][j],list[randomIndex]);// select the item from team and input to list of teams 
 		}
