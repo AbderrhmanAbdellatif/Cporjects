@@ -41,6 +41,7 @@ void main()
 		  printf("%s", list[c]);
 	  }*/
 	// ----------------------------------step 2 
+
 	srand(time(NULL));
 
 	for (i = 0; i < 8; i++) {
@@ -51,35 +52,37 @@ void main()
 		}
 	}
 
+	/*for (k = 0; k < 8; k++) {
+		for (m = 0; m < 4; m++) {
+			printf("%s", Mix[k][m]);
+		}
+		printf("\n");
+	}*/
+	
+	//-------------------------- step  3 not done yet 
+	char  t[20];
+	printf("Enter any five string (name) : ");
+	
+	for (i = 1; i < 32; i++)
+	{
+		for (j = 1; j < 32; j++)
+		{
+			if (strcmp(Mix[j - 1][i], Mix[j][i]) > 0)
+			{
+				strcpy(t, Mix[j - 1][i]);
+				strcpy(Mix[j - 1][i],Mix[j][i]);
+				strcpy(Mix[j][i], t);
+			}
+		}
+	}
+	printf("Strings (Names) in alphabetical order : \n");
 	for (k = 0; k < 8; k++) {
 		for (m = 0; m < 4; m++) {
 			printf("%s", Mix[k][m]);
 		}
 		printf("\n");
 	}
+
 	system("pause");
-	//-------------------------- step  3 not done yet 
-	//char  t[20];
-	//printf("Enter any five string (name) : ");
-	//
-	//for (i = 1; i < 32; i++)
-	//{
-	//	for (j = 1; j < 32; j++)
-	//	{
-	//		if (strcmp(Mix[j - 1][i], Mix[j][i]) > 0)
-	//		{
-	//			strcpy(t, Mix[j - 1][i]);
-	//			strcpy(Mix[j - 1][i],Mix[j][i]);
-	//			strcpy(Mix[j][i], t);
-	//		}
-	//	}
-	//}
-	//printf("Strings (Names) in alphabetical order : \n");
-	//for (i = 0; i < 32; i++)
-	//{
-	//	printf("%s\n", str[i]);
-	//}
-
-
 
 }
