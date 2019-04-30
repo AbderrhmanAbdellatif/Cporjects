@@ -1,0 +1,7 @@
+﻿  TABANAYUVARLAMA.cpp
+c:\users\fsmblm1\documents\visual studio 2017\projects\tabanayuvarlama\tabanayuvarlama\tabanayuvarlama.cpp(16): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\fsmblm1\documents\visual studio 2017\projects\tabanayuvarlama\tabanayuvarlama\tabanayuvarlama.cpp(20): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+  TABANAYUVARLAMA.vcxproj -> c:\users\fsmblm1\documents\visual studio 2017\Projects\TABANAYUVARLAMA\Debug\TABANAYUVARLAMA.exe
+  TABANAYUVARLAMA.vcxproj -> c:\users\fsmblm1\documents\visual studio 2017\Projects\TABANAYUVARLAMA\Debug\TABANAYUVARLAMA.pdb (Partial PDB)
