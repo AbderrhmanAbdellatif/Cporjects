@@ -8,7 +8,7 @@
 int TABANAYUVARLAMA(float sayi,int deger);
 int main()
 {
-
+	// soru 1
 	/*
 	int sum;
 	float money;
@@ -27,8 +27,8 @@ int main()
 	printf("\n TABANAYUVARLAMA degeri %d \n",yakindeger);
 	*/
 
-
-	int  B[4][4],C[2][4];
+	// soru 2 
+	int  B[4][4],C[4][2];
 
 	for (size_t i = 0; i <4; i++)
 	{
@@ -50,19 +50,35 @@ int main()
 	}
 
 
-
+	int k = 0;
 	for (size_t i = 0; i <4; i++)
 	{
-		for (size_t j = 0; j <4; j++)
-		{
-			if (i)
+		for (size_t j = 0; j <4; j=j+2)
+		{    
+			if (k>1)
 			{
-
+				k = 0;
 			}
+			if (B[i][j]<B[i][j+1]) {
+				C[i][k] = B[i][j+1];
+			}
+			else
+			{
+				C[i][k] = B[i][j];
+			}
+			k++;
 		}
 		printf(" \n ");
 	}
 
+	for (size_t i = 0; i <4; i++)
+	{
+		for (size_t j = 0; j <2; j++)
+		{
+			printf(" %d ", C[i][j]);
+		}
+		printf(" \n ");
+	}
 
 
 
